@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloom with LOVE</title>
+
+    <style>
+      body {
+        margin: 0px auto;
+        background-image: url(https://flwrdesigns.com/cdn/shop/files/IMG_4544_720x.heic?v=1688665135);
+        background-size: 60%;
+        backdrop-filter: blur(15px);
+      }
+
+      .container {
+        max-width: 750px;
+        margin: 50px auto;
+        padding: 20px;
+        color: azure;
+        border-radius: 35px;
+        box-shadow: 0 0 20px rgb(241, 239, 240);
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .img1 {
+        box-shadow: 0 0 20px rgb(241, 239, 240);
+        border-radius: 10px;
+      }
+
+      .img2 {
+        box-shadow: 0 0 20px rgb(241, 239, 66);
+        border-radius: 10px;
+      }
+
+      .description {
+        max-width: 400px;
+        position: relative;
+        top: -90px;
+        left: 250px;
+        padding: 50px;
+        border-radius: 35px;
+        box-shadow: 0 0 20px rgb(241, 239, 240);
+        backdrop-filter: blur(15px);
+      }
+
+      .description2 {
+        max-width: 400px;
+        position: relative;
+        top: -90px;
+        left: 250px;
+        padding: 50px;
+        border-radius: 35px;
+        box-shadow: 0 0 20px rgb(241, 239, 66);
+        backdrop-filter: blur(15px);
+      }
+
+      h1 {
+        margin: 0px auto;
+        text-align: center;
+        color: azure;
+        padding-top: 10px;
+        text-decoration: underline;
+      }
+
+      h2 {
+        font-weight: 500;
+        text-align: center;
+        font-size: medium;
+        line-height: 2%;
+        color: azure;
+      }
+
+      h3 {
+        font-weight: 700;
+        font-size: larger;
+      }
+
+      span {
+        color: rgb(148, 147, 147);
+        display: block;
+        text-align: center;
+        padding: 20px 50px;
+        font-size: 20px;
+        font-family: monospace;
+      }
+
+      button {
+        width: 100%;
+        padding: 8px;
+        border: none;
+        color: azure;
+        cursor: pointer;
+        font-family: monospace;
+        border-radius: 15px;
+        border-bottom: 2px solid #696868;
+        box-shadow: 0 0 20px rgb(241, 239, 240);
+        background: transparent;
+      }
+
+      button:hover {
+        background-color: rgb(148, 147, 147);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bloom With Love: A Celebration of Sunflowers and Roses</h1>
+    <h2><em> Radiate Love, Shine Bright with Sunflowers and Roses!</em></h2>
+    <div class="container">
+      <h3 class="roses">Roses🌹</h3>
+      <img
+        src="https://i.pinimg.com/736x/6d/c0/57/6dc05760d0e19008ef0a9a9af45eb3b0.jpg"
+        width="400"
+        height="400"
+        class="img1"
+      />
+      <p class="description">
+        <strong><em> White roses</em></strong
+        >, with their pure and serene appearance, represent innocence, purity,
+        and new beginnings. They embody the essence of grace and elegance,
+        evoking a sense of peace and tranquility. White roses remind us to
+        embrace the purity within ourselves and to approach life with a fresh
+        perspective, free from judgment and prejudice.
+      </p>
+
+      <br />
+
+      <h3 class="sunflowers">Sunflowers🌻</h3>
+      <img
+        src="https://asset.bloomnation.com/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1698551561/vendor/4452/catalog/product/2/0/20200212103149_file_5e447cd55eb86_5e447d6850bff.jpg"
+        width="400"
+        height="500"
+        class="img2"
+      />
+      <p class="description2">
+        <strong> <em> Sunflowers</em></strong
+        >, stand tall, basking in the warmth of the sun, symbolizing resilience
+        and optimism. Their vibrant yellow petals exude a sense of joy and
+        vitality, reminding us to always seek the light, even in the darkest of
+        times. With their cheerful disposition, sunflowers teach us to turn
+        towards positivity and embrace the beauty of each day.
+      </p>
+
+      <hr />
+
+      <p>
+        <strong>
+          <a
+            href="https://blog.netflorist.co.za/what-your-favourite-flower-says-about-you/"
+            >More info</a
+          >
+        </strong>
+      </p>
+
+      <button>What's your favourite?</button>
+    </div>
+
+    <span>coded by Nonhlanhla Zwane</span>
+
+    <script>
+      function FavouriteFlower() {
+        let flower = prompt(
+          "So what's your favourite flower? Roses/Sunflower/Both/None"
+        );
+        flower = flower.toLowerCase().trim();
+        if (flower === "roses") {
+          document.querySelector(".roses").innerHTML = "🤭💃";
+        } else if (flower === "sunflowers") {
+          document.querySelector(".sunflowers").innerHTML = "🤭💃";
+        } else if (flower === "both") {
+          document.querySelector(".roses").innerHTML = "🤭💃";
+          document.querySelector(".sunflowers").innerHTML = "🤭💃";
+          alert("Twin, where have you been?! 🤭💃😊");
+        } else {
+          document.querySelector(".roses").innerHTML = "😞";
+          document.querySelector(".sunflowers").innerHTML = "😞";
+          alert("Ouch, it is okay💔");
+        }
+      }
+      let FaveFlower = document.querySelector("button");
+      FaveFlower.addEventListener("click", FavouriteFlower);
+    </script>
+  </body>
+</html>
